@@ -13,6 +13,7 @@ endif()
 include_directories(include)
 link_directories(lib/cpp/${ARCH})
 
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -no-pie")
 option(PYTHON_BUILD "build python wrapper" OFF)
 if(PYTHON_BUILD)
   add_subdirectory(python_wrapper)
